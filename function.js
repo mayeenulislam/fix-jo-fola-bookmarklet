@@ -27,3 +27,6 @@ function fixJoFola() {
     // Set the code back into its place (the textarea)
     textarea.value = decodedText;
 }
+
+// Invoke the function.
+fixJoFola();
