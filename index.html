@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>য-ফলা সংশোধন (বুকমার্ককলেট)</title>
+        <style>
+            a {
+                text-decoration: none;
+                color: navy;
+            }
+
+            .bookmarklet {
+                background-color: darkred;
+                color: #fff;
+                padding: 0.2rem 0.5rem;
+                border-radius: 4px;
+                cursor: move;
+            }
+
+            ol {
+                list-style-type: bengali;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>য-ফলা সংশোধন (বুকমার্ককলেট)</h1>
+        <p>MacOS-এ বাংলা লেখার সময় Unijoy (ইউনিজয়) কীবোর্ড লেআউট ব‍্যবহার করলে য-ফলা ভেঙে যায়। সমস‍্যাটি সমাধানের জন‍্য এই Bookmarkletটি ব‍্যবহার করা যাবে।</p>
+
+        <h2 style="margin-bottom: 0;">করণীয়সমূহ</h2>
+        <p style="margin-top: 0;">বুকমার্ককলেটটি ব‍্যবহার করতে নিচের কাজগুলো করতে হবে:</p>
+        
+        <p>
+            <strong>প্রথমে একবার</strong><br/>
+            নিচের বুকমার্ককলেটটি drag করে আপনার ব্রাউযারের bookmark bar-এ ছেড়ে দিন<br>
+            <a class="bookmarklet" href="javascript:(function()%7Bfunction fixJoFola() %7B%0A    var textarea %3D document.querySelector('textarea%23textarea')%3B%0A%0A    var text %3D textarea.value%3B%0A%0A    var encodedText %3D encodeURI(text)%3B%0A%0A    encodedText %3D encodedText.replaceAll("%25E2%2580%258D"%2C "")%3B%0A%0A    var decodedText %3D decodeURI(encodedText)%3B%0A%0A    textarea.value %3D decodedText%3B%0A%7D%0A%0AfixJoFola()%3B%7D)()%3B">Fix য-ফলা</a>
+        </p>
+
+        <strong>এরপর থেকে প্রতিবার</strong> লেখালেখির সময় এই কাজগুলো করতে হবে:
+        <ol>
+            <li>আপনার বাংলা লেখাগুলো copy করুন</li>
+            <li><a href="https://textarea.online" target="_blank" rel="noopener noreferrer nofollow">textarea.online</a> সাইটে গিয়ে লেখাগুলো paste করে নিন</li>
+            <li>আপনার ব্রাউযারে রাখা এই বুকমার্ককলেটিতে ক্লিক করুন</li>
+            <li>সংশোধিত লেখাগুলো copy করে নিয়ে কাজে লাগান</li>
+        </ol>
+
+        <hr>
+        <small>তৈরি করেছেন: <a href="https://mayeenulislam.github.io">মঈনুল ইসলাম</a></small>
+    </body>
+</html>
