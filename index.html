@@ -4,7 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>য-ফলা সংশোধন (বুকমার্ককলেট)</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
         <style>
+            body {
+                font-family: "Noto Sans Bengali", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+            }
+            
             a {
                 text-decoration: none;
                 color: navy;
@@ -18,33 +29,43 @@
                 cursor: move;
             }
 
-            ol {
-                list-style-type: bengali;
+            ol { list-style-type: bengali; }
+
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
             }
+
+            .text-center { text-align: center }
+            .text-left { text-align: left }
         </style>
     </head>
-    <body>
-        <h1>য-ফলা সংশোধন (বুকমার্ককলেট)</h1>
-        <p>MacOS-এ বাংলা লেখার সময় Unijoy (ইউনিজয়) কীবোর্ড লেআউট ব‍্যবহার করলে য-ফলা ভেঙে যায়। সমস‍্যাটি সমাধানের জন‍্য এই Bookmarkletটি ব‍্যবহার করা যাবে।</p>
-
-        <h2 style="margin-bottom: 0;">করণীয়সমূহ</h2>
-        <p style="margin-top: 0;">বুকমার্ককলেটটি ব‍্যবহার করতে নিচের কাজগুলো করতে হবে:</p>
-        
-        <p>
-            <strong>প্রথমে একবার</strong><br/>
-            নিচের বুকমার্ককলেটটি drag করে আপনার ব্রাউযারের bookmark bar-এ ছেড়ে দিন<br>
-            <a class="bookmarklet" href="javascript:(function()%7Bfunction fixJoFola() %7B%0A    var textarea %3D document.querySelector('textarea%23textarea')%3B%0A%0A    var text %3D textarea.value%3B%0A%0A    var encodedText %3D encodeURI(text)%3B%0A%0A    encodedText %3D encodedText.replaceAll("%25E2%2580%258D"%2C "")%3B%0A%0A    var decodedText %3D decodeURI(encodedText)%3B%0A%0A    textarea.value %3D decodedText%3B%0A%7D%0A%0AfixJoFola()%3B%7D)()%3B">Fix য-ফলা</a>
-        </p>
-
-        <strong>এরপর থেকে প্রতিবার</strong> লেখালেখির সময় এই কাজগুলো করতে হবে:
-        <ol>
-            <li>আপনার বাংলা লেখাগুলো copy করুন</li>
-            <li><a href="https://textarea.online" target="_blank" rel="noopener noreferrer nofollow">textarea.online</a> সাইটে গিয়ে লেখাগুলো paste করে নিন</li>
-            <li>আপনার ব্রাউযারে রাখা এই বুকমার্ককলেটিতে ক্লিক করুন</li>
-            <li>সংশোধিত লেখাগুলো copy করে নিয়ে কাজে লাগান</li>
-        </ol>
-
-        <hr>
-        <small>তৈরি করেছেন: <a href="https://mayeenulislam.github.io">মঈনুল ইসলাম</a></small>
+    <body class="text-center">
+        <div class="container">
+            <h1>য-ফলা সংশোধন (বুকমার্ককলেট)</h1>
+            <p>MacOS-এ বাংলা লেখার সময় Unijoy (ইউনিজয়) কীবোর্ড লেআউট ব‍্যবহার করলে য-ফলা ভেঙে যায়। সমস‍্যাটি সমাধানের জন‍্য এই Bookmarkletটি ব‍্যবহার করা যাবে।</p>
+    
+            <h2 style="margin-bottom: 0;">করণীয়সমূহ</h2>
+            <p style="margin-top: 0;">বুকমার্ককলেটটি ব‍্যবহার করতে নিচের কাজগুলো করতে হবে:</p>
+            
+            <p>
+                <strong>প্রথমে একবার</strong><br/>
+                নিচের বুকমার্ককলেটটি drag করে আপনার ব্রাউযারের bookmark bar-এ ছেড়ে দিন<br>
+                <a class="bookmarklet" href="javascript:(function()%7Bfunction fixJoFola() %7B%0A    var textarea %3D document.querySelector('textarea%23textarea')%3B%0A%0A    var text %3D textarea.value%3B%0A%0A    var encodedText %3D encodeURI(text)%3B%0A%0A    encodedText %3D encodedText.replaceAll("%25E2%2580%258D"%2C "")%3B%0A%0A    var decodedText %3D decodeURI(encodedText)%3B%0A%0A    textarea.value %3D decodedText%3B%0A%7D%0A%0AfixJoFola()%3B%7D)()%3B">Fix য-ফলা</a>
+            </p>
+    
+            <strong>এরপর থেকে প্রতিবার</strong> লেখালেখির সময় এই কাজগুলো করতে হবে:
+            <ol class="text-left">
+                <li>আপনার বাংলা লেখাগুলো copy করুন</li>
+                <li><a href="https://textarea.online" target="_blank" rel="noopener noreferrer nofollow">textarea.online</a> সাইটে গিয়ে লেখাগুলো paste করে নিন</li>
+                <li>আপনার ব্রাউযারে রাখা এই বুকমার্ককলেটিতে ক্লিক করুন</li>
+                <li>সংশোধিত লেখাগুলো copy করে নিয়ে কাজে লাগান</li>
+            </ol>
+    
+            <hr>
+            <small>তৈরি করেছেন: <a href="https://mayeenulislam.github.io">মঈনুল ইসলাম</a></small>
+        </div>
     </body>
 </html>
